@@ -1,0 +1,1 @@
+SELECT name as 'Restaurant Name', keyword as Type, business_status as Status, price_level as Price, rating as Rating, address as Address from pr.restaurants_tbl where city='Arecibo'  and keyword='japanese'  and ifnull(price_level,0) >=0  and ifnull(rating,0) >=0 

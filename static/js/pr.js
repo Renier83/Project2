@@ -36,7 +36,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 // var farmap = L.map('frid').setView([18.330379, -65.660606], 13);
 // var arecibomap = L.map('arid').setView([18.470440, -66.722282], 13);
 
-san_juan = [18.466333, -66.105721, '<a href="/city/SanJuan">San Juan<a>']
+san_juan = [18.466333, -66.105721, '<a href="/city/San Juan">San Juan<a>']
 ponce = [18.01108, -66.61406, '<a href="/city/Ponce">Ponce<a>']
 rincon = [18.340216, -67.250015, '<a href="/city/Rincon">Rincon<a>']
 fajardo = [18.325787, -65.652382, '<a href="/city/Fajardo">Fajardo<a>']

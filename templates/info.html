@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Leaflet Step-1</title>
+    <title>Information</title>
 
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -47,7 +47,7 @@
             </div>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/info">Information</span></a>
+            <a class="nav-link" href="/information">Information</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/team">Team</a>
@@ -59,10 +59,44 @@
     </nav>
 
     <!-- The div that holds our map -->
-    <div id="mapid">
+    <p>
+    <table>
+      <tr>
+        <td>
+          <h1 style="text-align: center;">{{ cityname }}</h1>
+        </td>
+    </table>
 
-    </div>
+    <p></p>
+    <form action="{{ url_for('info') }}" name="myForm" id="myForm" method="post">
+      <label>City:</label>
+      <select name="cityID" id="cityID" onchange="submitform()">
+        <option value="{{ cityname }}">Select city</option>
+        <option value="San Juan">San Juan</option>
+        <option value="Ponce">Ponce</option>
+        <option value="Arecibo">Arecibo</option>
+        <option value="Fajardo">Fajardo</option>
+        <option value="Rincon">Rincon</option>
+        <option value="Humacao">Humacao</option>
+        <option value="Mayaguez">Mayaguez</option>
+      </select>
+      <!-- <input type="submit"> -->
+    </form>
 
+    <script>
+      // var auto_refresh = setInterval(function () { submitform(); }, 10000);
+
+      function submitform() {
+        // alert('test');
+        document.getElementById("myForm").submit();
+      }
+    </script>
+
+    <input type="hidden" id="city_id" value="{{ cityname }}">
+
+    <div id="cityInfo"></div>
+    <p></p>
+    <pre id="output"></pre>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -80,7 +114,7 @@
     <!-- API key -->
     <script type="text/javascript" src="/static/js/config.js"></script>
     <!-- Our JavaScript -->
-    <script type="text/javascript" src="/static/js/map.js"></script>
+    <script type="text/javascript" src="/static/js/info.js"></script>
   </body>
 
 </html>

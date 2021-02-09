@@ -14,7 +14,7 @@
             integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
         <link rel="stylesheet" href="/static/css/style.css" media="screen">
-        <title>Video Game</title>
+        <title>City</title>
     </head>
 
     <body>
@@ -31,10 +31,10 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Report
+                            Where to Go
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="/city/SanJuan">San Juan</a>
+                            <a class="dropdown-item" href="/city/San Juan">San Juan</a>
                             <a class="dropdown-item" href="/city/Ponce">Ponce</a>
                             <a class="dropdown-item" href="/city/Arecibo">Arecibo</a>
                             <a class="dropdown-item" href="/city/Fajardo">Fajardo</a>
@@ -45,10 +45,10 @@
                         </div>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/database">Database</span></a>
+                        <a class="nav-link" href="/information">Information</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/rating">Food</a>
+                        <a class="nav-link" href="/team">Team</a>
                     </li>
 
                 </ul>
@@ -60,15 +60,15 @@
             <div class="row">
                 <div class="col-md-12">
                     <h1 style="text-align: center;">{{ cityname }}</h1>
-                    <form action="/map" method="POST">
+                    <!-- <form action="/map" method="POST">
                         <input type="radio" id="chkMap" name="chkMap" value="map">Map
                         <input type="radio" id="chkMap" name="chkMap" value="bar">Bar
                         <input type="hidden" id="city_id" name="city_id" value="{{ cityname }}">
                         <input type="hidden" id="chart" name="chart" value="{{ chart }}">
                         <input type="submit">
-                    </form>
+                    </form> -->
 
-                    <input type="hidden" id="city_id" value="{{ filename }}">
+                    <input type="hidden" id="city_id" value="{{ cityname }}">
 
                     <div id="{{ chart }}"></div>
                 </div>
